@@ -2,11 +2,9 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .serializers import FlightSerializer, ReservationSerializer, StaffFlightSerializer
 from .models import Flight, Reservation
-from rest_framework.permissions import IsAdminUser
+# from rest_framework.permissions import IsAdminUser
 from .permissions import IsStafforReadOnly
 from datetime import datetime, date
-
-# Create your views here.
 
 
 class FlightView(viewsets.ModelViewSet):
